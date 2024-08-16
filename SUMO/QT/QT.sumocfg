@@ -1,0 +1,10 @@
+<configuration>
+    <input>
+        <net-file value="QT.net.xml"/>
+        <route-files value="QT.rou.xml"/>
+    </input>
+    <output>
+        <no-warnings value="true"/>
+        <full-output value="QT.output.xml"/>   
+    </output>
+</configuration>
