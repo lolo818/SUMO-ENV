@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "quantumtrafficlight"
+version = "0.1.0"
+description = ""
+authors = ["lolo818 <g36029757@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+libsumo = "^1.20.0"
+
+
+[tool.poetry.group.dev.dependencies]
+
+[build-system]
+package-mode = false
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
