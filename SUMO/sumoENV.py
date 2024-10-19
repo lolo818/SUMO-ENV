@@ -94,12 +94,14 @@ class junctionTrafficInfo:
         local_x, local_y = [int(i) for i in self.junction_id.split("-")[:2]]
         x, y = [int(i) for i in other.junction_id.split("-")[:2]]
         direction = getDirection(local_x, local_y, x, y)
-        other_vehicles_num = other.getTaTolVehiclesNum()
+
+        other_vehicles = other.getTatolVehicles()
+        incoming_vehicles = getattr(self, f"{direction}_i_vehicles") & other_vehicles
+        other_vehicle_num = len(other_vehicles)
+        incoming_vehicle_num = len(incoming_vehicles)
 
         transfer_rate = (
-            0
-            if other_vehicles_num == 0
-            else len(getattr(other, f"{direction}_i_vehicles")) / other_vehicles_num
+            0 if other_vehicle_num == 0 else incoming_vehicle_num / other_vehicle_num
         )
 
         setattr(self, f"{direction}_transfer_rate", transfer_rate)
