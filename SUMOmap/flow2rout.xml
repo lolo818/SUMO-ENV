@@ -1,0 +1,4 @@
+<flowdefs>
+<vType id="CarA" accel="3.0" decel="6.0" length="5.0" minGap="2.5" maxSpeed="10.0" sigma="0.5"/>
+<flow id="2" type="CarA" from="E75" to="-E83" begin="0" end="500" number="25"/>
+</flowdefs>
