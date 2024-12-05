@@ -1,0 +1,14 @@
+<configuration>
+	<input>
+		<net-file value="test.net.xml"/>
+		<route-files value="flow2route.xml"/>
+	</input>
+	<output>
+		<write-license value="false"/>
+		<output-file value="test.rou.xml"/>
+	</output>
+		<report>
+		<xml-validation value="never"/>
+		<no-step-log value="true"/>
+	</report>
+</configuration>
